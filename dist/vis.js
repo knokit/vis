@@ -10771,7 +10771,7 @@ TimeStep.FORMAT = {
     hour: 'HH:mm',
     weekday: 'ddd D',
     day: 'D',
-    week: 'w',
+    week: 'D',
     month: 'MMM',
     year: 'YYYY'
   },
@@ -11070,7 +11070,7 @@ TimeStep.prototype.setMinimumStep = function (minimumStep) {
     this.scale = 'month';this.step = 1;
   }
   if (stepDay * 5 > minimumStep) {
-    this.scale = 'day';this.step = 5;
+    this.scale = 'week';this.step = 1;
   }
   if (stepDay * 2 > minimumStep) {
     this.scale = 'day';this.step = 2;
